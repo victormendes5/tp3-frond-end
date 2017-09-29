@@ -1,0 +1,79 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">Casa</div>
+  <div class="panel-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Tarefa realizadas</th>
+        <th>Tarefa</th>
+        <th>Categoria</th>
+      </tr>
+      </thead>
+      <tbody *ngFor="let task of tasks">
+      <tr *ngIf="task.categoria === 'Casa'">
+        <td>
+          <form>
+            <input type="checkbox" [checked]="task.feito" (click)="isChecked()">
+          </form>
+        </td>
+        <!--<td *ngIf="task.feito === false; else showToDo">{{ task.nome }}</td>-->
+        <!--<td *ngIf="task.feito === false">{{ task.categoria }}</td>-->
+        <td>{{ task.nome }}</td>
+        <td>{{ task.categoria }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">Faculdade</div>
+  <div class="panel-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Tarefa realizadas</th>
+        <th>Tarefa</th>
+        <th>Categoria</th>
+      </tr>
+      </thead>
+      <tbody *ngFor="let task of tasks">
+      <tr *ngIf="task.categoria === 'Faculdade'">
+        <td>
+          <form>
+            <input type="checkbox" [checked]="task.feito" (click)="isChecked()">
+          </form>
+        </td>
+        <td>{{ task.nome }}</td>
+        <td>{{ task.categoria }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">Trabalho</div>
+  <div class="panel-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Tarefa realizadas</th>
+        <th>Tarefa</th>
+        <th>Categoria</th>
+      </tr>
+      </thead>
+      <tbody *ngFor="let task of tasks">
+      <tr *ngIf="task.categoria === 'Trabalho'">
+        <td>
+          <form>
+            <input type="checkbox" [checked]="task.feito" (click)="isChecked()">
+          </form>
+        </td>
+        <td>{{ task.nome }}</td>
+        <td>{{ task.categoria }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

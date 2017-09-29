@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <form class="navbar-form navbar-right">
+        <a routerLink="/categories" routerLinkActive="active" class="btn btn-primary">+ Categoria</a>
+        <a routerLink="/tasks" routerLinkActive="active" class="btn btn-primary">+ Tarefa</a>
+        <a routerLink="/home" routerLinkActive="active" class="btn btn-primary">Ver tarefas por lista única</a>
+        <a routerLink="/otherHome" routerLinkActive="active" class="btn btn-primary">Ver tarefas por categoria</a>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+

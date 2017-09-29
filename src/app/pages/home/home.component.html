@@ -1,0 +1,51 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">Tarefas Pendentes</div>
+  <div class="panel-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Tarefa realizadas</th>
+        <th>Tarefa</th>
+        <th>Categoria</th>
+      </tr>
+      </thead>
+      <tbody *ngFor="let task of tasks">
+      <tr *ngIf="task.feito === false">
+        <td>
+          <form>
+            <input type="checkbox" [checked]="task.feito">
+          </form>
+        </td>
+        <td>{{ task.nome }}</td>
+        <td>{{ task.categoria }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">Tarefas Realizadas</div>
+  <div class="panel-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Tarefa realizadas</th>
+        <th>Tarefa</th>
+        <th>Categoria</th>
+      </tr>
+      </thead>
+      <tbody *ngFor="let task of tasks">
+      <tr *ngIf="task.feito === true">
+        <td>
+          <form>
+            <input type="checkbox" [checked]="task.feito">
+          </form>
+        </td>
+        <td><s>{{ task.nome }}</s></td>
+        <td><s>{{ task.categoria }}</s></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
